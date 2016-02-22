@@ -1,0 +1,21 @@
+nav {
+  height: 50px;
+  background-color: #fafcfa;
+  line-height: 50px;
+  padding: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: black;
+  pointer-events: none;
+  cursor: default;
+}
