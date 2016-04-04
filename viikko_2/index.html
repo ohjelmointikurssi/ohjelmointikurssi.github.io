@@ -9,7 +9,7 @@
 
     <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="/stylesheets/site.css" rel="stylesheet" />
     <script src="/javascripts/all.js"></script>
   </head>
@@ -18,6 +18,7 @@
     <nav>
       <a href="/">Viikko 1</a>
       <a class="active" href="/viikko_2/">Viikko 2</a>
+      <a href="/viikko_3/">Viikko 3</a>
     </nav>
     <div id='container'>
 
@@ -25,30 +26,41 @@
 
   <h1>Viikko 2</h1>
 
-  <p>
-    Tällä viikolla harjoitellaan piirtämistä. Meillä on käytössämme pieni apuväline, joka auttaa pirtämään kuviota. Ohjelma aloittaa piirtämisen tietystä pisteestä ja voit ohjata piirtosuuntaa komennoilla: "up()", "down()", "right()" ja "left()".
-  </p>
+  <h2>Koordinaatisto</h2>
+  <div class="chapter">
+    <p>
+      Oletetaan, että jokainen mahdollinen piste piirtoalustalla voidaan kuvata koordinaatteina. Tämä koordinaatisto ei kuitenkaan ole tavanomainen koordinaatisto, sillä akselit eivät alakkaan vasemmasta alakulmasta, vaan vasemmasta yläkulmasta! Y-akseli kulkee vasemmasta yläkulmasta kohti vasenta alakulmaa ja x-akseli kulkee vasemmasta yläkulmasta kohti oikeaa yläkulmaa. Vasemman yläkulman koordinaatit olisivat siis (0, 0) ja oikean alakulman koordinatit olisivat (800, 600).
+    </p>
+  </div>
 
-  <p>
-    Seuraavassa tehtävässä on esimerkki millaisia yksinkertaisia kuviota voit piirtää ohjelmalla. Yritä piirtää shakkiruudukko!
-  </p>
+  <h2>Piirtäminen</h2>
+  <div class="chapter">
+    <p>
+      Tällä viikolla harjoitellaan piirtämistä. Meillä on käytössämme pieni apuväline, joka auttaa pirtämään kuviota. Ohjelma aloittaa piirtämisen tietystä pisteestä ja voit ohjata piirtosuuntaa komennoilla: "up()", "down()", "right()" ja "left()".
+    </p>
 
-  <div data-type='tmc-exercise' data-id='2705'></div>
+    <p>
+      Seuraavassa tehtävässä on esimerkki millaisia yksinkertaisia kuviota voit piirtää ohjelmalla. Yritä piirtää shakkiruudukko!
+    </p>
 
-  <p>
-    Valitettavasti kuitenkin näin yksinkertaisilla komennoilla piirtäminen jää melko surulliseksi yritykseksi. Otetaan vähäsen monimuotoisemmat piirtovälineet käyttöön.
-  </p>
+    <div data-type='tmc-exercise' data-id='2705'></div>
 
-  <p>
-    Oletetaan, että jokainen mahdollinen piste piirtoalustalla voidaan kuvata koordinaatteina. Tämä koordinaatisto ei kuitenkaan ole tavanomainen koordinaatisto, sillä akselit eivät alakkaan vasemmasta alakulmasta, vaan vasemmasta yläkulmasta! Y-akseli kulkee vasemmasta yläkulmasta kohti vasenta alakulmaa ja x-akseli kulkee vasemmasta yläkulmasta kohti oikeaa yläkulmaa. Vasemman yläkulman koordinaatit olisivat siis (0, 0) ja oikean alakulman koordinatit olisivat (800, 600).
-  </p>
+    <p>
+      Valitettavasti kuitenkin näin yksinkertaisilla komennoilla piirtäminen jää melko surulliseksi yritykseksi. Otetaan vähäsen monimuotoisemmat piirtovälineet käyttöön.
+    </p>
 
-  <p>
-    Seuraavassa tehtävässä meillä on käytössä uusi piirtometodi: "moveTo(x, y)". Metodi piirtää viivan annettuihin koordinaatteihin. Tehtävänpoja piirtää kolmion. Yritä ymmärtää miten se syntyy. Osaatko piirtää talon?
-  </p>
+    <p>
+      Seuraavassa tehtävässä meillä on käytössä uusi piirtometodi: "moveTo(x, y)". Metodi piirtää viivan annettuihin koordinaatteihin. Tehtävänpoja piirtää kolmion. Yritä ymmärtää miten se syntyy. Osaatko piirtää talon?
+    </p>
 
-  <div data-type='tmc-exercise' data-id='2706'></div>
+    <h3>Toistolauseet piirtämisessä</h3>
 
+    <p>
+      Toistolauseet soveltuvat erinomaisesti piitämiseen. Ne helpottavat huikeasti esimerkiksi erilaisten kuvioden piirtämistä.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2706'></div>
+  </div>
 </div>
 
 
