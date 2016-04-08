@@ -51,9 +51,15 @@ code {
   padding: 0.2em 0;
   border-radius: 3px; }
 
+pre code {
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  max-width: 1000px;
+  margin: 0 auto; }
+
 pre {
   font-family: monospace;
-  background-color: white !important; }
+  background-color: white; }
 
 .multiple-columns {
   display: flex;
@@ -65,3 +71,7 @@ pre {
   border: 1px solid;
   padding: 5px;
   border-radius: 10px; }
+
+.narrow, .multiple-columns, p, h1, h2, h3, h4, h5, h6 {
+  max-width: 1000px;
+  margin: auto; }
