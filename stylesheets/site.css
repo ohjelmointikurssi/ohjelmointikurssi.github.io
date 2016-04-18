@@ -72,3 +72,8 @@ pre {
 .narrow, .multiple-columns, p, h1, h2, h3, h4, h5, h6 {
   max-width: 1000px;
   margin: 20px auto; }
+
+img.coordinates {
+  width: 250px;
+  height: 250px;
+  margin-left: 10px; }
