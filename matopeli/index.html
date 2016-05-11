@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title>Sarja 3</title>
+
+    <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/color-brewer.min.css">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="matopeli matopeli_index">
+    <nav>
+      <a href="/">Etusivu</a>
+      <a href="/muuttujat/">Muuttujat</a>
+      <a href="/listat/">Listat</a>
+      <a href="/funktiot/">Funktiot</a>
+      <a href="/ehdot/">Ehdot</a>
+      <a href="/piirtaminen/">Piirtäminen</a>
+      <a href="/toisto/">Toisto</a>
+      <a class="active" href="/matopeli/">Matopeli</a>
+    </nav>
+    <div id='container'>
+      <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
+      <div id='container'>
+
+  <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
+
+  <h1>Matopeli</h1>
+
+  <div class="chapter">
+    <h2>Alkuaskelia</h2>
+
+    <p>
+      Viime viikolla piirsimme neliönmuotoisista paloista erilaisia kuviota. Pelkästään paikallaanolevien kuvioden piirtely on valitettavasti hieman tylsää. Tämän kurssinhan pitäisi olla peliohjelmointikurssi eikä piirtokurssi. Olisiko mahdollista saada edellisen viikon kuviosta aikaiseksi peli?
+    </p>
+
+    <p>
+      Neliöistä piirretyistä viivoista tulee auttamatta mieleen matopeli. Jos loisimme madon viime viikon viivojen tapaan, laittaisimme sen olemaan tietyn pituinen ja lisäisimme omenan, meillä melkein olisi jo pieni peli valmiina. Kuullostaa paremmalta! Lähdetään liikkeelle!
+    </p>
+
+    <h3>Madon luonti</h3>
+
+    <p>
+      Tässä matopelissä uuden madon luonti on yksinkertaista. Se onnistuu asettamalla yksi madon palanen pelialueelle. Sen jälkeen mato alkaa itsestään kasvamaan, kunnes se saavuttaa oikean pituudensa. Madon pituus on tallennettu <code>koko</code>-muuttujaan.
+    </p>
+
+    <p>
+      Alla olevassa tehtäväpohjassa asetetaan yksi palanen pelialueelle. Mato alkaa kasvamaan suunta-muuttujan mukaiseen suuntaan kunnes siitä on tullut koko:n kokoinen.
+    </p>
+
+    <p>
+      Kuten viime viikon piirtotehtävissä, koordinaatisto alkaa pelialueen vasemmasta yläkulmasta. Pelialueella x-koordinaatti voi saada arvoja välillä <code>0..39</code> ja y-koordinaatti voi saada arvoja välillä <code>0..29</code>. Jos esimerkiksi haluaisit lisätä madon osan pelialueen vasempaan yläkulmaan, se onnistuisi komennolla: <code>luoMadonOsa(0, 0)</code>. Madon osan piirtäminen pelialueen oikeaan alakulmaan onnistuu komennolle <code>luoMadonOsa(39, 29)</code>.
+    </p>
+    <p>
+      <strong>Tehtävä:</strong> Mato lähtee liikkelle vähäsen hassusta paikasta. Saatko madon lähtemään liikkumaan pelialueen keskeltä. Lisäksi keksitkö miten mato alkaa liikkumaan oikealle pelin alussa?
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: sallitut suunnat ovat: 'oikealle', 'vasemmalle', 'ylös' ja 'alas'.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2796'></div>
+
+    <p>
+      Alla olevassa tehtäväpohjassa on pieni ongelma käyettävyyden kannalta. Pystytkö löytämään sen? Kun olet löytänyt ongelman, kokeile muuttaa <code>this.game.time.slowMotion</code>:in arvoa. Saatko pelistä toimivan?
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2797'></div>
+
+    <h3>Madon koon rajoittaminen</h3>
+
+    <p>
+      Jos haluamme matopelin on olevan jotekin järkevä, haluamme rajoittaa sen kokoa. Tehtäviemme mato kasvaa kunnes se on saavuttanut pituuden, joka löytyy muuttujasta: <code>koko</code>. Funktiossa <code>create</code> asetetaan <code>koko</code>-muuttujaan madon alkukoko. Madon alkukoko määrää miten isoksi mato alussa kasvaa.
+    </p>
+
+    <p>
+      <strong>Tehtävä</strong>: muuta madon toimintaa niin, että se ei kasva loputtoman pitkäksi alussa. Hyvä aloituskoko on pienenmpi kuin viisi.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2814'></div>
+
+    <p>
+      <strong>Tehtävä</strong>: Alla olevassa tehtävässä luodaan yhden pituinen mato. Kokeile miltä peli toimii. Haluamme saada madosta isomman. Mato kasvaa itsestään, kun <code>koko</code>-muuttujan arvo kasvaa. Tiedoston <code>create.js</code>:n lopussa on funktio <code>kerranSekunnissa</code>, jonka koodi ajetaan aina kerran sekunnissa. Nosta siellä muuttujan <code>koko</code> arvoa ja katso, mitä tapahtuu.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2815'></div>
+  </div>
+  <div class="chapter">
+    <h2>Liikkuminen</h2>
+    <p>
+      Toteutetaan seuraavaksi madon liikkumisen. Haluamme saada madon muuttamaan suuntaansa, kun pelaaja painaa nuolinäppäintä. Emme kuitenkaan halua mahdollistaa madolle mahdottomia käännöksiä, esim. jos mato on menossa oikealle, emme voi lähteä menemään vasemmalle.
+    </p>
+
+    <p>
+      Olemme toteuttaneet suunnan muutoksen metodiin lueSuunta. Alla olevassa tehtävässä voit muuttaa kyseisen metodin sisältöä. Osa suunnanmuutoksista on jo totutettu valmiiksi. Toteuta loput muutokset.
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>liikkuminen.js</code>. Muuta muuttujien <code>x</code> ja <code>y</code> arvoa samaan tapaan kuin tehtäväpohjassa olevissa esimerkeissä.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2798'></div>
+  </div>
+
+  <div class="chapter">
+    <h2>Törmäysten tunnistaminen</h2>
+    <h3>Omenan syönti</h3>
+
+    <p>
+      Haluasimme tunnistaa, kun mato saa syötyä omenan. Olemme luoneet <code>törmäykset</code>-tiedostoon metodin <code>törmääOmenaan</code>, joka kertoo onko mato törmännyt omenaan. Jos mato on törmännyt omenaan, pelistä poistetaan nykyinen omena, pelin pisteitä kasvatetaan ja luodaan uusi omena.
+    </p>
+
+    <p>
+      Pääsemme omenan x- ja y-koordinaatteihin käsiksi koodinpätkillä <code>omena.x</code> ja <code>omena.y</code>. Voimme käyttää omenaa suoraan näin, koska omena-muuttuja on määritelty create.js-tiedostossa kaiken mahdollisen ulkopuolella.
+    </p>
+
+    <p>
+      Funktiossa <code>törmääOmenaan</code> on madon pää otettu muuttujaan <code>madonPää</code>. Saamme madon pään x-koordinaatin komennolla <code>madonPää.x</code> ja y-koordinaatin komennolla <code>madonPää.y</code>.
+      Mato on syönyt omenan, kun madon pään ja omenan sekä x että y-koordinaatit ovat samoja.
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Kirjoita muuttujiin <code>xKoordinaatitOvatSamat</code> ja <code>yKoordinaatitOvatSamat</code> tarkistukset ovatko muuttujien <code>madonPää</code> ja <code>omena</code> x- ja y-koordinaatit samat. Muista, että yhtäsuuruden tarkistus onnistuu <code>==</code>-operaatiolla. Koordinaattehin pääsee käsiksi kirjoittamalla <code>muuttuja.x</code> tai <code>muuttuja.y</code>.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2799'></div>
+
+    <p>
+      <strong>Tehtävä</strong>: Funktio <code>uusiOmena()</code> luo uuden omenan ja asettaa sen muuttujaan <code>omena</code>. Alla olevassa tehtäväpohjassa luodaan pelin alussa yksi uusi omena. Kokeile lisätä useita uusia omenoita. Mikä ei toimi? Miksi näin käy? Millä tämän voisi korjata? (Ei tarvitse tehdä.)
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: Miten teit omenan syönnin tarkistuksen edellisessä tehtävässä?
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2816'></div>
+
+    <h3>Seinään törmääminen</h3>
+
+    <p>
+      Pelimme toimiin nyt hyvin, mutta haluamme sen myös loppuvan joskus. Toteutetaan seuraavaksi toiminnallisuus, jossa peli loppuu madon törmättyä seinään.
+    </p>
+
+    <p>
+      Tunnistaaksemme seinään törmäyksen meidän täytyy joka kierroksella tarkistaa, onko törmäys tapahtunut. Tarkastus on yksinkertaista tehdä tarkastamalla yrittääkö madon pää mennä pelialueen ulkopuolelle.
+    </p>
+
+    <p>
+      Törmäykset-tiedostossa olemme toteuttaneet metodin seiniintörmäysen varaalle. Metodi toimii eräänlaisena kysymyksenä: "Onko mato törmäännyt seinään". Jos törmäys on tapahtunut, metodi sanoo joo eli "<code>return true;</code>". Jos törmäystä ei ole tapahtunut, metodi sanoo että ei ole tapahtunut eli: "<code>return false;</code>". Eli käytännössä metodissa olevan if-ehdon toteutuessa todetaan törmäyksen tapahtuneen.
+    </p>
+
+    <p>
+      Olemme ottaneet madon pään talteen muuttujaaan <code>madonPää</code>. Saat madon pään nykyisen x-koordinaatin komennolla: <code>madonPää.x</code> ja y-koordinaatin komennolla <code>madonPää.y</code>.
+    </p>
+
+    <p>
+      Tunnistaaksemme madon menemisen pelialueeen ulkopuolelle, meidän täytyy tarkistaa erikseen onko se mennyt vasemman laidan yli, onko se mennyt oikean laidan yli, onko se mennyt ylälaidan yli ja onko se mennyt alalaidan yli. Tämä tapahtuu vertailemalla madon pään sijaintia pelialueen rajoihin.
+    </p>
+
+    <p>
+      Esimerkki: tarkistetaan onko mato mennyt pelialueen oikean laidan yli. Mennäkseen oikean laidan yli, madon täytyy kulkea vaakatasossa, joka on x-akselin suuntainen. Olemme siis kiinnostuneet tarkistelemaan miten suureksi miten pitkällä madon pää on x-akselin suhteen. Mato on mennyt oikean laidan yli, kun madon pää on mennyt enemmän oikealle kuin pelialueen raja. Koska oikealle mennessä x-akselin arvo kasvaa, haluamme tarkistaa onko nykyinen x-akslin arvo suurempi kuin pelin rajat. Tämä onnistuu koodissa lauseella <code>var onMennytOikealtaYli = madonPää.x >= pelinLeveys</code>. Tällä koodilla muuttujan <code>onMennytOikealtaYli</code> arvoksi tulee totta, jos mato on mennyt oikean laidan yli ja ei totta jos näin ei ole tapahtunut. Voimme käyttää tätä muttujaa myehemmin  ehdon vertailussa.
+    </p>
+
+    <p>
+      Vastaavasti jos haluamme tarkistaa onko mato mennyt vasemmasta reunasta yli, huomaamme että haluamme tässäkin tarkastella x-akselin arvoa. Koska pelin vasen reuna alkaa nollasta ja vasemmalle mentäessä x-koordinaatin arvot pienenevät, haluamme tarkastella onko x-akselin arvo päässyt pienemmäksi kuin 0. Koodina tämä onnistuisi lausekkeella: <code>var onMennytVasemmaltaYli = madonPää.x < 0;</code>
+    </p>
+
+    <p>
+      <strong>Tehtävä:</strong> alla olevassa tehtäväpohjassa on runko seinään törmäksen tunnistamiseksi. Täydennä loput rajojen yli menemiset koodiin. Metodissa oleva ehtolause tarkistaa onko mikään ehtomuuttujista totta, ja kertoo mahdollisesta törmäyksestä sen mukaisesti.
+    </p>
+
+    <p class="hint">
+      <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Täydennä muuttujat <code>mennytAlhaaltayli</code> ja <code>mennytYlhäältäYli</code> toimimaan samalla tavalla kuin muuttujat <code>mennytYlhäältäYli</code> ja <code>mennytYlhäältäYli</code>.
+    </p>
+
+    <div data-type='tmc-exercise' data-id='2800'></div>
+
+    <h3>Itseensä törmääminen</h3>
+
+    <p>
+      Pelin pitäisi myös loppua, kun mato törmää itseensä. Mato on törmännyt itseensä, silloin kun sen pää on osunut samoihin koordinaatteihin kun mikään sen osista. Tämä on kuitenkin hankalampaa kuin edelliset tarkistuksemme, sillä matopelin mato pidentyy pelin kuluessa ja emme voi tietää kuinka monta tarkastelua meidän täytyy tehdä.
+    </p>
+
+    <p>
+      Toistolauseet pelastavat meidät hankalasta tilanteesta. Voimme tehdä tarkistuksen jokaisessa taulukossa olevalla madon osalla viime viikolta tutulla <code>while</code>-toistorakenteella. Tässä vaiheessa aloitamme poikkeuksellisesti indeksoinnin ykkösestä, ohittaen madon pään.
+    </p>
+
+    <pre><code class="javascript">var indeksi = 1;
+  while(true) {
+    var nykyinenMadonOsa = mato[indeksi];
+    // Täällä voimme tehdä tarkistuksia madon osille käyttämällä nykyinenMadonOsa-muuttujaa
+    indeksi = indeksi + 1;
+    if (indeksi >= lista.length) {
+      break;
+    }
+  }</code></pre>
+
+      <p>
+        Koodi käy jokaisen madon osan peräkkäin läpi toistorakenteen sisällä. Tämä on siis ihanteellinen paikka tarkistaa onko madon pää törmännyt johonkin madon osaan. Pääsemme madon osiin toistolauseessa käsiksi <code>osa</code>-muuttujan kautta käsiksi.
+      </p>
+
+      <p>
+        <strong>Tehtävä:</strong> toteuta metodiiin <code>onTörmännytItseensä</code> tarkistus, onko mato törmännyt itseensä.
+      </p>
+
+      <p class="hint">
+        <strong>Vihje</strong>: Joudut muokkaaamaan tiedostoa <code>tormaykset.js</code>. Laita muuttujiin xKoordinaatitOvatSamat ja yKoordinaatitOvatSamat tarkistus, onko madonPää:n ja nykyinenMadonOsa:n x- ja y-koordinaatit samat.
+      </p>
+
+      <div data-type='tmc-exercise' data-id='2801'></div>
+    </div>
+    <div class="chapter">
+      <h2>Valmista!</h2>
+
+      <p>Olemme saaneet matopelin valmiiksi. Hienoa työtä! Alla on toimiva peli.</p>
+
+      <div data-type='tmc-exercise' data-id='2714'></div>
+    </div>
+  </div>
+
+    </div>
+
+    <footer>
+      Tämän sisällön ovat tehneet mahdolliseksi <a href="https://www.cs.helsinki.fi/">Helsingin yliopiston Tietojenkäsittelytieteen laitos</a>, <a href="http://100-vuotissaatio.teknologiateollisuus.fi/">Teknologiateollisuuden satavuotissäätiö</a> ja <a href="https://www.cs.helsinki.fi/en/rage/">Agile Education Research-tutkimusryhmä RAGE</a>.
+    </footer>
+
+      <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/jszip/2.2.2/jszip.js'></script>
+      <script src='//stuk.github.io/jszip-utils/dist/jszip-utils.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.runtime.min.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/ace/1.2.2/ace.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/phaser/2.4.3/phaser.min.js'></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+      <script src='//ohjelmointikurssi.github.io/cdn/tmc-web-client-min.js'></script>
+
+      <script>
+        $(document).ready(function() {
+          hljs.initHighlightingOnLoad();
+          TMCWebClient.initialise();
+        });
+      </script>
+  </body>
+</html>

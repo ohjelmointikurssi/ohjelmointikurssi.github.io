@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title>Listat</title>
+
+    <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/color-brewer.min.css">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="listat listat_index">
+    <nav>
+      <a href="/">Etusivu</a>
+      <a href="/muuttujat/">Muuttujat</a>
+      <a class="active" href="/listat/">Listat</a>
+      <a href="/funktiot/">Funktiot</a>
+      <a href="/ehdot/">Ehdot</a>
+      <a href="/piirtaminen/">Piirtäminen</a>
+      <a href="/toisto/">Toisto</a>
+      <a href="/matopeli/">Matopeli</a>
+    </nav>
+    <div id='container'>
+      <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
+      <div class="chapter">
+  <h1>Listat</h1>
+  <h2>Listat</h2>
+
+  <p>
+    Lista on objekti, joka voi sisältää useita useita eri objekteja. Tyhjä lista luodaan merkinnällä <code>var lista = [];</code>. Listan sisällä voi olla muita objekteja. Merkintä <code>var lista = [1, 2, 3, 4];</code> luo uuden listan, jonka sisällä on numerot 1, 2, 3 ja 4. Listoihin voi laittaan kaikentyyppisiä objekteja, kuten vaikka sanoja. Koodi <code>var lista = ["JavaScript", "Ohjelmointi"];</code> luo listan, jonka sisällä on merkkjonot <code>"JavaScript"</code> ja <code>"Ohjelmointi"</code>.
+  </p>
+
+  <p>
+    Listaan voi myös laittaa muiden objektien arvoja. Koodi:
+  </p>
+
+  <pre><code class="javascript">var a = 1;
+var b = 3;
+var c = "kissa";
+var lista = [a, b, c];</code></pre>
+    <p>
+      luo uuden taulukon, jonka sisältö on 1, 3 ja kissa. Voimme merkitä tälläistä listaa merkinnällä <code>[1, 3, "kissa"]</code>.
+    </p>
+
+    <h4>Listojen harjoittelua</h4>
+    <p>
+      Muuta alla olevaa tehtäväpohjaa siten, että muuttujan <code>lista</code> sisältö on <code>[1, 2, "listat", "ovat", "hauskoja!"]</code>;
+    </p>
+
+    <div class="code-area" data-type='tmc-exercise' data-id='2781'></div>
+
+  <p>
+    Listojen luonti sujuu melko näppärästi, mutta usein ohjelmoinnissa haluamme muokata listoja jotenkin. Olisi hyvä jos voisimme lisätä alkioita listaan, ottaa niitä pois ja niin edelleen.
+  </p>
+
+  <h3>Listan loppuun lisääminen</h3>
+
+  <p>
+    Olemassa olevan listan loppuun voidaan lisätä uusi alkio komennolla <code>lista.push(lisättävä_alkio);</code>. Jos haluamme vaikka lisätä listaan numeron 3, se onnistuu koodilla: <code>lista.push(3);</code>. Alla olevan koodin suorituksen jälkeen listan sisältö on <code>[3, 7, 4]</code>:
+    <p>
+
+      <pre><code class="javascript">var lista = [3];
+lista.push(7); // Listan sisältö on nyt [3, 7]
+lista.push(4); // Listan sisältö on nyt [3, 7, 4]</code></pre>
+
+      <p>
+        Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan loppuun alkiota niin, että listan sisällöksi tulee 4, 5, 6.
+      </p>
+
+      <div data-type='tmc-exercise' data-id='2794'></div>
+
+      <h3>Listan alkuun lisääminen</h3>
+
+      <p>
+        Nyt pystymme luomaan listoja ja lisäämään niiden loppuun alkiota. Valitettavasti kuitenkin tämä ei aina riitä. Tietyissä tilanteissa voitaisiin haluta lisätä alkioita listan alkuun. Javascriptissä on onneksi ratkaisu tähän ongelmaan. Koodi <code>lista.unshift(lisättävä_alkio)</code> tomii samalla tavalla kuin <code>lista.push</code>, mutta se lisää alkiota listan alkuun eikä loppuun. Alla oleva koodi luo listan, jonka sisältö on [9, 5, 1].
+      </p>
+
+      <pre><code class="javascript">var lista = [1];
+lista.unshift(5); // Listan sisältö on nyt [5, 1]
+lista.unshift(9); // Listan sisältö on nyt [9, 5, 1]</code></pre>
+
+      <p>
+        Tehtävä: Alla olevassa tehtäväpohjassa on luotu lista, jonka sisältö on 4. Lisää listan alkuun alkiota niin, että listan sisällöksi tulee 2, 3, 4.
+      </p>
+
+      <div data-type='tmc-exercise' data-id='2793'></div>
+
+      <h3>Listasta poistaminen</h3>
+
+      <p>
+        Voimme myös haluta poistaa listasta alkiota. Kuten varmaan jo edellisistä tehtävistä arvasitkin, voimme poistaa alkiota joko listan alusta tai listan lopusta. Koodi <code>lista.pop()</code> poistaa elementin listan lopusta ja koodi <code>lista.shift()</code> poistaa listan ensimmäisen alkion.
+      </p>
+
+      <p>Tehtävä: Poista listan alusta kaksi elementtiä ja lopusta yksi elementti. Mikä tulee tulokseksi?</p>
+
+      <div data-type='tmc-exercise' data-id='2795'></div>
+    </div>
+
+    </div>
+
+    <footer>
+      Tämän sisällön ovat tehneet mahdolliseksi <a href="https://www.cs.helsinki.fi/">Helsingin yliopiston Tietojenkäsittelytieteen laitos</a>, <a href="http://100-vuotissaatio.teknologiateollisuus.fi/">Teknologiateollisuuden satavuotissäätiö</a> ja <a href="https://www.cs.helsinki.fi/en/rage/">Agile Education Research-tutkimusryhmä RAGE</a>.
+    </footer>
+
+      <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/jszip/2.2.2/jszip.js'></script>
+      <script src='//stuk.github.io/jszip-utils/dist/jszip-utils.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.runtime.min.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/ace/1.2.2/ace.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/phaser/2.4.3/phaser.min.js'></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+      <script src='//ohjelmointikurssi.github.io/cdn/tmc-web-client-min.js'></script>
+
+      <script>
+        $(document).ready(function() {
+          hljs.initHighlightingOnLoad();
+          TMCWebClient.initialise();
+        });
+      </script>
+  </body>
+</html>
