@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Muuttjat ja tulostaminen</title>
+    <title>Muuttujat ja tulostaminen</title>
 
     <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -38,9 +38,15 @@
     Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä.
   </p>
 
-  <p>
-    Harjoitellaan tulostamista. Alla on tyhjä ohjelman runko. Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
-  </p>
+<div class="exercise-description">
+  <div class="exercise-description-header">
+    Tehtävä:<div><strong>Nimen tulostaminen</strong></div>
+  </div>
+  <div class="exercise-description-content ">
+      <div>    Harjoitellaan tulostamista. Alla on tyhjä ohjelman runko. Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
+</div>
+  </div>
+</div>
 
   <div data-type='tmc-exercise' data-id='2779'></div>
 </div>
@@ -72,38 +78,48 @@
     Ohjelmoinnissa muuttujat pitää luoda eli <i>alustaa</i> (englanniksi initialize) ennen kuin niitä voi käyttää. JavaScriptissä muuttujat alustetaan kirjoittamalla <code>var muuttujanNimi = muuttujanArvo;</code>. Aluksi määritellään, että nyt luodaan uusi muuttuja kirjoittamalla sana 'var' (tulee sanasta variable). Seuraavaksi määritellään muuttujalle nimi. Muuttujan nimessä ei saa olla välilyöntejä, minkä takia muuttujat yleensä nimetään ns. camelCasella. CamelCasessa lauseen ensimmäinen kirjain kirjoitetaan pienellä, minkä jälkeen jokaisen muun sanan ensimmäinen kirjain kirjoitetaan isolla kirjaimella ja muut pienellä. Esimerkiksi lause "ohjelmointi on kivaa" kirjoitettaisiin camelCasessa "ohjelmointiOnKivaa". Yhtäsuuruus-merkillä annetaan muuttujalle arvo, ja itse arvo kirjoitetaan yhtäsuuruus-merkin oikealle puolelle. Jokainen JavaScript-koodirivi pitää vielä lopettaa puolipisteellä. Merkkijonon sisältävän muuttujan voi alustaa kirjoittamalla <code>var merkkijono = "Terve, mitä kuuluu?";</code>. Huomaa, että merkkijono-tyylisiä muuttujia alustaessa pitää käyttää lainausmerkkejä muuttujan arvon ympärillä.
   </p>
 
-  <h4>Muuttujien harjoittelua</h4>
-  <p>
-    Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti. Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
-  </p>
-  <h4>Odotettu vastaus</h4>
-  <p>
-    Näytölle pitäisi ilmestyä muutujalle annettu arvo, esim. oma etunimesi.
-  </p>
+<div class="exercise-description">
+  <div class="exercise-description-header">
+    Tehtävä:<div><strong>Muuttujien harjoittelua</strong></div>
+  </div>
+  <div class="exercise-description-content ">
+      <div>    Harjoitellaan seuraavaksi hiukan muuttujien käyttöä. Tässä tehtävässä luodaan aluksi muuttuja <i>etunimi</i>, johon talletetaan merkkijono. Sen jälkeen tulostetaan etunimi näytölle. Tehtäväpohjassa on valmiiksi kirjoitettu muuttujan <i>etunimi</i> tulostus: <code>console.log(etunimi);</code>. Tehtävänäsi on lisätä tiedoston ensimmäiselle riville muuttujan alustus eli luonti. Tässä ja useissa myöhemmissä tehtävistä osa koodista on lukittu ja voit editoida vain vapaita alueita. Lukitun alueen tunnistaa harmaasta taustaväristä, kun taas lukitsemattoman alueen taustaväri on valkoinen.
+</div>
+  </div>
+    <div class="exercise-description-additional-information">
+      <strong>Odotettu vastaus:</strong> Näytölle pitäisi ilmestyä muutujalle annettu arvo, esim. oma etunimesi.
+    </div>
+</div>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2288'></div>
 
-  <h4>Laskuri</h4>
-  <p>
-    Tehdään seuraavaksi yksinkertainen laskuri. Tässä tehtävässä luodaan aluksi kaksi muuttujaa <i>a</i> ja <i>b</i>, joihin talletetaan lukuja. Sen jälkeen tulostetaan lukujen summa näytölle. Tehtäväpohjassa on tällä kertaa vain kommentit, jotka kertovat mitä jokaisella rivillä pitäisi tehdä. Kirjoita rivit käyttäen hyödyksi yhteenlasku-esimerkkiä ja edellisen tehtävän muuttujan tulostusta.
-  </p>
-  <h4>Odotettu vastaus</h4>
-  <p>
-    Jos annat luvuille esim. arvot 5 ja 2, pitäisi näytölle tulostua luku 7.
-  </p>
+<div class="exercise-description">
+  <div class="exercise-description-header">
+    Tehtävä:<div><strong>Laskuri</strong></div>
+  </div>
+  <div class="exercise-description-content ">
+      <div>    Tehdään seuraavaksi yksinkertainen laskuri. Tässä tehtävässä luodaan aluksi kaksi muuttujaa <i>a</i> ja <i>b</i>, joihin talletetaan lukuja. Sen jälkeen tulostetaan lukujen summa näytölle. Tehtäväpohjassa on tällä kertaa vain kommentit, jotka kertovat mitä jokaisella rivillä pitäisi tehdä. Kirjoita rivit käyttäen hyödyksi yhteenlasku-esimerkkiä ja edellisen tehtävän muuttujan tulostusta.
+</div>
+  </div>
+    <div class="exercise-description-additional-information">
+      <strong>Odotettu vastaus: </strong> Jos annat luvuille esim. arvot 5 ja 2, pitäisi näytölle tulostua luku 7.
+    </div>
+</div>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2289'></div>
 
-  <h4>Muuttujat pelissä</h4>
-
-  <p>
-    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
-  </p>
-
-  <h4>Odotettu vastaus</h4>
-  <p>
-    Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.
-  </p>
+<div class="exercise-description">
+  <div class="exercise-description-header">
+    Tehtävä:<div><strong>Muuttujat pelissä</strong></div>
+  </div>
+  <div class="exercise-description-content ">
+      <div>    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne. Katso tarvittaessa apua ensimmäisestä tehtävästä tai editorin alla olevista vihjeistä.
+</div>
+  </div>
+    <div class="exercise-description-additional-information">
+      <strong>Odotettu vastaus: </strong> Peli toimii samalla tavalla kuin ensimmäisessä tehtävässä.
+    </div>
+</div>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2290'></div>
 
@@ -129,11 +145,16 @@ console.log(8 / 4); // tulostaa luvun 2</code></pre>
   <p>
     <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?"); // tulostaa "Hei, mitä kuuluu?"</code></pre>
   </p>
-  <h4>Operaatioden harjoittelua</h4>
 
-  <p>
-    Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
-  </p>
+<div class="exercise-description">
+  <div class="exercise-description-header">
+    Tehtävä:<div><strong>Operaatioden harjoittelua</strong></div>
+  </div>
+  <div class="exercise-description-content ">
+      <div>    Alla olevassa tehtäväpohjassa on alustettu kaksi muuttujaa <code>a</code> ja <code>b</code>. Tässä tehtävässä tehdään näillä muuttujilla laskutoimituksia. Tee joku laskutoimitus, jonka tulos on <code>30</code>.
+</div>
+  </div>
+</div>
 
   <div class="code-area" data-type='tmc-exercise' data-id='2780'></div>
 </div>

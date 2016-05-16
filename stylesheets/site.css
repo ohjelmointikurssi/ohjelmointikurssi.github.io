@@ -1,18 +1,26 @@
 @charset "UTF-8";
 nav {
   height: 50px;
-  background-color: #fafcfa;
+  background-color: #2980b9;
   line-height: 50px;
-  padding: 0 15px; }
+  padding: 0 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
   nav a {
+    color: white !important;
     text-decoration: none;
-    margin: 0 20px; }
+    margin: 0 20px;
+    color: #2866c2; }
     nav a:hover {
-      text-decoration: underline; }
+      border-bottom: 1px solid white; }
     nav a.active {
-      color: black;
+      color: white;
+      font-weight: bold;
       pointer-events: none;
-      cursor: default; }
+      cursor: default;
+      border-bottom: 2px solid white; }
+  nav a::before {
+    content: '';
+    background-color: red; }
 
 footer {
   width: 100%;
@@ -69,7 +77,7 @@ pre {
   padding: 5px;
   border-radius: 10px; }
 
-.narrow, .multiple-columns, p, h1, h2, h3, h4, h5, h6 {
+.narrow, p, h1, h2, h3, h4, h5, h6, .exercise-description {
   max-width: 1000px;
   margin: 20px auto; }
 
@@ -87,3 +95,26 @@ img.coordinates {
 
 img {
   margin-right: 20px; }
+
+.exercise-description {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .exercise-description .exercise-description-content {
+    padding: 10px; }
+  .exercise-description .exercise-description-additional-information {
+    padding: 10px;
+    border-top: 1px solid #E0E0E0; }
+  .exercise-description .exercise-description-header {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 10px;
+    background-color: #2980b9;
+    color: white; }
+    .exercise-description .exercise-description-header strong {
+      font-size: 20px; }
+
+.highlight-background {
+  background-color: #f9dfdf;
+  padding: 2px;
+  border-radius: 5px; }
