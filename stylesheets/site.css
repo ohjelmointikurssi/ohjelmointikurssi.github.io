@@ -110,6 +110,10 @@ img {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
   .exercise-description .exercise-description-content {
     padding: 10px; }
+    .exercise-description .exercise-description-content > div > p:first-of-type {
+      margin-top: 0; }
+    .exercise-description .exercise-description-content > div > p:last-of-type {
+      margin-bottom: 0; }
   .exercise-description .exercise-description-additional-information {
     padding: 10px;
     border-top: 1px solid #E0E0E0; }
