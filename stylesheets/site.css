@@ -19,13 +19,13 @@ nav {
     margin: 0 20px;
     color: #2866c2; }
     nav a:hover {
-      border-bottom: 1px solid white; }
+      border-bottom: 2px solid white; }
     nav a.active {
       color: white;
       font-weight: bold;
       pointer-events: none;
       cursor: default;
-      border-bottom: 2px solid white; }
+      border-bottom: 3px solid white; }
   nav a::before {
     content: '';
     background-color: red; }
@@ -85,7 +85,7 @@ pre {
   padding: 5px;
   border-radius: 10px; }
 
-.narrow, p, h1, h2, h3, h4, h5, h6, .exercise-description {
+.narrow, p, h1, h2, h3, h4, h5, h6, .exercise-description, .demo-images {
   max-width: 1000px;
   margin: 20px auto; }
 
@@ -130,3 +130,19 @@ img {
   background-color: #f9dfdf;
   padding: 2px;
   border-radius: 5px; }
+
+.editor-demo {
+  width: auto;
+  height: 200px;
+  float: left; }
+
+.demo-images {
+  clear: both; }
+  .demo-images img {
+    border: 12px solid #ecf0f1;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    margin-right: 30px; }
+  .demo-images div {
+    padding-top: 10px; }
