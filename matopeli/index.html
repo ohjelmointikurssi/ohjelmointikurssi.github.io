@@ -196,7 +196,7 @@
     </p>
 
     <p>
-      Törmäykset-tiedostossa olemme toteuttaneet metodin seiniintörmäysen varaalle. Metodi toimii eräänlaisena kysymyksenä: "Onko mato törmäännyt seinään". Jos törmäys on tapahtunut, metodi sanoo joo eli "<code>return true;</code>". Jos törmäystä ei ole tapahtunut, metodi sanoo että ei ole tapahtunut eli: "<code>return false;</code>". Eli käytännössä metodissa olevan if-ehdon toteutuessa todetaan törmäyksen tapahtuneen.
+      Törmäykset-tiedostossa olemme toteuttaneet metodin seiniintörmäysen varaalle. Metodi toimii eräänlaisena kysymyksenä: "Onko mato törmäännyt seinään". Jos törmäys on tapahtunut, metodi sanoo joo eli "<code>return true</code>". Jos törmäystä ei ole tapahtunut, metodi sanoo että ei ole tapahtunut eli: "<code>return false</code>". Eli käytännössä metodissa olevan if-ehdon toteutuessa todetaan törmäyksen tapahtuneen.
     </p>
 
     <p>
@@ -212,7 +212,7 @@
     </p>
 
     <p>
-      Vastaavasti jos haluamme tarkistaa onko mato mennyt vasemmasta reunasta yli, huomaamme että haluamme tässäkin tarkastella x-akselin arvoa. Koska pelin vasen reuna alkaa nollasta ja vasemmalle mentäessä x-koordinaatin arvot pienenevät, haluamme tarkastella onko x-akselin arvo päässyt pienemmäksi kuin 0. Koodina tämä onnistuisi lausekkeella: <code>var onMennytVasemmaltaYli = madonPää.x < 0;</code>
+      Vastaavasti jos haluamme tarkistaa onko mato mennyt vasemmasta reunasta yli, huomaamme että haluamme tässäkin tarkastella x-akselin arvoa. Koska pelin vasen reuna alkaa nollasta ja vasemmalle mentäessä x-koordinaatin arvot pienenevät, haluamme tarkastella onko x-akselin arvo päässyt pienemmäksi kuin 0. Koodina tämä onnistuisi lausekkeella: <code>var onMennytVasemmaltaYli = madonPää.x < 0</code>
     </p>
 
 <div class="exercise-description">
@@ -240,13 +240,13 @@
       Toistolauseet pelastavat meidät hankalasta tilanteesta. Voimme tehdä tarkistuksen jokaisessa taulukossa olevalla madon osalla viime viikolta tutulla <code>while</code>-toistorakenteella. Tässä vaiheessa aloitamme poikkeuksellisesti indeksoinnin ykkösestä, ohittaen madon pään.
     </p>
 
-    <pre><code class="javascript">var indeksi = 1;
+    <pre><code class="javascript">var indeksi = 1
   while(true) {
-    var nykyinenMadonOsa = mato[indeksi];
+    var nykyinenMadonOsa = mato[indeksi]
     // Täällä voimme tehdä tarkistuksia madon osille käyttämällä nykyinenMadonOsa-muuttujaa
-    indeksi = indeksi + 1;
+    indeksi = indeksi + 1
     if (indeksi >= lista.length) {
-      break;
+      break
     }
   }</code></pre>
 
@@ -277,6 +277,8 @@
       <div data-type='tmc-exercise' data-id='2714'></div>
     </div>
   </div>
+
+<p>Voit tässä vaiheessa täyttää kurssipalautteen.</p>
 
     </div>
 
