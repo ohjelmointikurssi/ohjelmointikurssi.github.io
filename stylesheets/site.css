@@ -64,7 +64,9 @@ h3:before {
   content: counter(h2counter) "." counter(h3counter) ".  "; }
 
 code {
-  color: #8D1A38; }
+  background-color: #eaf4ff;
+  padding: 1px 5px;
+  border-radius: 2px; }
 
 pre code {
   border: 1px solid #DFDFDF;
