@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Muuttujat ja tulostaminen</title>
+    <title>Muuttujat</title>
 
     <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -20,6 +20,7 @@
   <body class="muuttujat muuttujat_index">
     <nav>
       <a href="/">Etusivu</a>
+      <a href="/tulostaminen/">Tulostaminen</a>
       <a class="active" href="/muuttujat/">Muuttujat</a>
       <a href="/listat/">Listat</a>
       <a href="/funktiot/">Funktiot</a>
@@ -30,72 +31,8 @@
     </nav>
     <div id='container'>
       <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
-      <h1>Muuttujat ja tulostaminen</h1>
+      <h1>Muuttujat</h1>
 
-<div class="chapter">
-  <h2>Tulostaminen</h2>
-
-  <p>
-    Eräs tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä näytölle. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia")</code>.
-    Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä joka tulostetaan sellaisenaan eikä ole esimerkiksi komento.
-  </p>
-
-  <p>
-    Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Alla olevassa esimerkissä on kommenttirivi ja tulostus. Esimerkki tulostaa: <code>Kanit on söpöjä</code>.
-  </p>
-
-  <pre><code class="javascript">// Tämä on kommentti ja alla on tulostuskomento
-console.log("Kanit on söpöjä.")</code></pre>
-
-<div class="exercise-description">
-  <div class="exercise-description-header">
-    Tehtävä:<div><strong>Nimen tulostaminen</strong></div>
-  </div>
-  <div class="exercise-description-content ">
-      <div>    Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
-</div>
-  </div>
-    <div class="exercise-description-additional-information">
-      <strong>Vihje</strong>: Kun kirjoitat tulostuskomennon ja käynnistät ohjelman, alle pitäisi ilmestyä valkoinen laatikko, johon on tulostunut nimesi.
-    </div>
-</div>
-
-  <div data-type='tmc-exercise' data-id='2779'></div>
-
-  <h3>Useasti tulostaminen</h3>
-
-  <p>
-    Tulostaminen voidaan tehdä niin monta kertaa kuin halutaan. Yksi tulostuskomento tulostaa aina yhden rivin tekstiä. Jos kirjoitamme tulostuskomennon useammin, tulostuu useampia rivejä. Tulostettavat rivit tulostuvat komentojen järjestyksessä ylhäältä alaspäin.
-  </p>
-
-  <p>Esimerkki:</p>
-
-  <pre><code class="javascript">console.log("Ensimmäinen rivi.")
-console.log("Toinen rivi.")
-console.log("Kolmas rivi.")</code></pre>
-
-  <p>Yllä oleva koodi tulostaa:</p>
-
-  <pre><code>Ensimmäinen rivi.
-Toinen rivi.
-Kolmas rivi.</code></pre>
-
-<div class="exercise-description">
-  <div class="exercise-description-header">
-    Tehtävä:<div><strong>Usean rivin tulostaminen</strong></div>
-  </div>
-  <div class="exercise-description-content ">
-      <div>  Kirjoita ohjelma, jonka tulostus on seuraavanlainen:
-  <pre><code class="javascript">Hei maailma!
-(Ja kaikki sen ihmiset)
-</code></pre>
-</div>
-  </div>
-</div>
-
-  <div data-type='tmc-exercise' data-id='2830'></div>
-
-</div>
 <div class="chapter">
   <h2>Muuttujat</h2>
   <p>

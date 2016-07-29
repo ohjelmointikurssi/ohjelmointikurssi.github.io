@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Funktiot</title>
+    <title>Tulostaminen</title>
 
     <link rel='stylesheet' href='//ohjelmointikurssi.github.io/cdn/tmc-web-client.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -17,13 +17,13 @@
     <script src="/javascripts/all.js"></script>
   </head>
 
-  <body class="funktiot funktiot_index">
+  <body class="tulostaminen tulostaminen_index">
     <nav>
       <a href="/">Etusivu</a>
-      <a href="/tulostaminen/">Tulostaminen</a>
+      <a class="active" href="/tulostaminen/">Tulostaminen</a>
       <a href="/muuttujat/">Muuttujat</a>
       <a href="/listat/">Listat</a>
-      <a class="active" href="/funktiot/">Funktiot</a>
+      <a href="/funktiot/">Funktiot</a>
       <a href="/ehdot/">Ehdot</a>
       <a href="/piirtaminen/">Piirtäminen</a>
       <a href="/toisto/">Toisto</a>
@@ -31,67 +31,72 @@
     </nav>
     <div id='container'>
       <a href="#" class='tmc-exercise-logout' title='Logout'>Logout</a>
-      <h1>Funktiot</h1>
+      <h1>Tulostaminen</h1>
+
 <div class="chapter">
-  <h2>Miksi käyttää funktioita?</h2>
+  <h2>Tulostaminen</h2>
 
   <p>
-    Yllä olevassa materiaalissa kaikki koodi suoritettiin heti, kun suoritus osuu koodin kohdalle. Haluamme kuitenkin usein siirtää koodin suoritusta tulevaisuuteen johonkin tiettyyn tapahtumaan. Tätä varten on olemassa funktiot. Funktioilla määritellään ohjelmakoodia, joka suoritetaan myöhemmin.
+    Eräs tärkeimmistä ohjelmoinnin perustaidoista on oppia tulostamaan tekstiä näytölle. Javascriptissä tulostus onnistuu komennolla <code>console.log("Tulostettava asia")</code>.
+    Lainausmerkit tulostettavan lauseen ympärillä tarkoittavat, että tulostettava asia on tekstiä joka tulostetana sellaisenaan eikä ole esimerkiksi komento.
   </p>
 
   <p>
-    Funktio määritellään kirjoittamalla <code>function funktionNimi() { koodi }</code>. Funktion määritellyssä aaltosulkujen välissä on koodi, joka tallennetaan odottamaan funktion kutsumista.  Voimme esimerkiksi määritellä funktion, joka tulostaa tervehdyksen.
-  </p>
-    <pre><code class="javascript">function tervehdi() {
-  console.log("Terve!")
-}</code></pre>
-</div>
-
-<h2>Funktion kutsuminen</h2>
-<div class="chapter">
-
-  <p>
-    Kun haluamme suorittaa jonkin funktion sisällä määriteltyä koodia, joudumme kutsumaan funktiota. Meidän onneksemme funktiot vastaavat omaan nimeensä, jos käytämme tiettyä kutsutapaa. Funktion kutsu onnistuu kirjoittamalla kutsuttavan funktion nimi, jonka perään laitetaan sulut <code>()</code>. Funktion kutsu onnistuu siis tyyliin: <code>kutsuttavanFunktionNimi()</code> Tässä on funktion kutsun perässä vielä puolipiste, koska kutsun jälkeen loppuu rivi.
-  </p>
-  <p>
-    Funktion nimi katsomalla funktion määritelmää. Nimi on <code>function</code>-sanan jälkeinen sana. Esimerkiksi voimme kutsua tervehdys-funktiota kirjoittamalla <code>tervehdi()</code>, koska saimme funktion nimen selville funktion määritelmästä: <code>function <span class="highlight-background">tervehdi</span>()</code>. Funktion kutsuminen suorittaa sen sisällä määritellyn koodin. Esimerkiksi alla oleva koodi tulostaisi "Terve!".
+    Ohjelmassa oleva rivi <code>// Kirjoita ohjelmasi tähän alle</code> on kommenttirivi, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Alla olevassa esimerkissä on kommenttirivi ja tulostus. Esimerkki tulostaa: <code>Kanit on söpöjä</code>.
   </p>
 
-  <pre><code class="javascript">tervehdi()</code></pre>
-
+  <pre><code class="javascript">// Tämä on kommentti ja alla on tulostuskomento
+console.log("Kanit on söpöjä.")</code></pre>
 
 <div class="exercise-description">
   <div class="exercise-description-header">
-    Tehtävä:<div><strong>Funktion kutsuminen</strong></div>
+    Tehtävä:<div><strong>Nimen tulostaminen</strong></div>
   </div>
   <div class="exercise-description-content ">
-      <div>    Tehtävä: Alla on määritelty funktio. Kutsu sitä.
+      <div>    Lisää kommenttirivin alle komento, joka tulostaa nimesi ja suorita ohjelma. Ohjelman tulostus voi olla vaikka: <code>Essi Esimerkki</code>.
 </div>
   </div>
+    <div class="exercise-description-additional-information">
+      <strong>Vihje</strong>: Kun kirjoitat tulostuskomennon ja käynnistät ohjelman, alle pitäisi ilmestyä valkoinen laatikko, johon on tulostunut nimesi.
+    </div>
 </div>
 
-  <div data-type='tmc-exercise' data-id='2792'></div>
+  <div data-type='tmc-exercise' data-id='2779'></div>
 
-  <h3>Funktion kutsuminen monesti</h3>
+  <h3>Useasti tulostaminen</h3>
 
   <p>
-    Funktiolla voi näppärästi vähentää ylimääräistä kirjoittamista. Jokaista määritettyä funktiota voidaan kutsua niin monta kertaa kuin haluamme. Jos esimerkikis kutsimme <code>tervehdi</code>-funktiota kaksi kertaa, tulostuu "Terve!" myös kahdesti.
+    Tulostaminen voidaan tehdä niin monta kertaa kuin halutaan. Yksi tulostuskomento tulostaa aina yhden rivin tekstiä. Jos kirjoitamme tulostuskomennon useammin, tulostuu useampia rivejä. Tulostettavat rivit tulostuvat komentojen järjestyksessä ylhäältä alaspäin.
   </p>
+
+  <p>Esimerkki:</p>
+
+  <pre><code class="javascript">console.log("Ensimmäinen rivi.")
+console.log("Toinen rivi.")
+console.log("Kolmas rivi.")</code></pre>
+
+  <p>Yllä oleva koodi tulostaa:</p>
+
+  <pre><code>Ensimmäinen rivi.
+Toinen rivi.
+Kolmas rivi.</code></pre>
 
 <div class="exercise-description">
   <div class="exercise-description-header">
-    Tehtävä:<div><strong>Kutsutaan monesti</strong></div>
+    Tehtävä:<div><strong>Usean rivin tulostaminen</strong></div>
   </div>
   <div class="exercise-description-content ">
-      <div>    Tehtävä: Kokeillaan kutsua funktiota monta kertaa. Alla olevassa tehtävässä on määritetty ja kutsuttu funktiota <i>kerran</i>. Muuta ohjelmaa siten, että funktiota kutsutaan <i>viisi</i> kertaa.
+      <div>  Kirjoita ohjelma, jonka tulostus on seuraavanlainen:
+  <pre><code class="javascript">Hei maailma!
+(Ja kaikki sen ihmiset)
+</code></pre>
 </div>
   </div>
 </div>
 
-  <div data-type='tmc-exercise' data-id='2826'></div>
-</div>
+ <div data-type='tmc-exercise' data-id='2830'></div>
 
-<p>Valmista? Jatka seuraavaksi <a href="/ehdot/">ehtoihin</a>.</p>
+</div>
 
     </div>
 
