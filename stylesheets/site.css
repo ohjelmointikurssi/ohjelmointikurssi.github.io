@@ -88,6 +88,8 @@ pre code {
   border-radius: 5px;
   max-width: 780px;
   margin: 0 auto; }
+  pre code.small-line-height {
+    line-height: 1.2em; }
 
 pre {
   font-family: monospace;
