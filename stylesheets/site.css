@@ -51,7 +51,7 @@ body {
 .chapter {
   counter-reset: h3counter; }
 
-h2, h3 {
+h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
   font-weight: normal; }
 
@@ -63,20 +63,18 @@ h2, h3 {
   border-bottom: 1px solid #EEEEEE;
   padding-bottom: 10px; }
 
+#container.exercise-page > h1:before {
+  content: counter(h1counter) ".  "; }
+
 h2 {
   font-size: 30px; }
 
 .chapter > h2:before {
-  content: counter(h2counter) ".  ";
-  counter-increment: h2counter;
-  counter-reset: h3counter; }
+  content: counter(h1counter) "." counter(h2counter) ".  ";
+  counter-increment: h2counter; }
 
 h3 {
   font-size: 24px; }
-
-.chapter > h3:before {
-  counter-increment: h3counter;
-  content: counter(h2counter) "." counter(h3counter) ".  "; }
 
 code {
   background-color: #eaf4ff;
