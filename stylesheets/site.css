@@ -33,15 +33,39 @@ nav {
     content: '';
     background-color: red; }
 
+.sponsor-logos {
+  margin: 40px;
+  clear: both;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  padding-top: 20px; }
+  .sponsor-logos img {
+    max-width: 500px;
+    height: auto;
+    width: auto;
+    display: block; }
+
 footer {
   width: 100%;
-  padding: 20px 0;
+  height: 200px;
   color: #fff;
-  background-color: #282626;
-  text-align: center; }
+  background-color: #2980b9;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
   footer a {
     color: #aad8ec;
     text-decoration: none; }
+  footer .footer-content {
+    padding: 20px 0;
+    flex: 1;
+    display: flex;
+    justify-content: space-around; }
+  footer .footer-bottom {
+    background-color: #2077b0;
+    height: 50px;
+    line-height: 50px; }
 
 body {
   text-rendering: optimizeLegibility;
@@ -50,6 +74,10 @@ body {
 
 .chapter {
   counter-reset: h3counter; }
+
+h3.sponsors {
+  clear: both;
+  padding-top: 40px; }
 
 h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
@@ -104,7 +132,7 @@ pre {
   padding: 5px;
   border-radius: 10px; }
 
-.narrow, p, h1, h2, h3, h4, h5, h6, .exercise-description, .demo-images {
+.narrow, .sponsor-logos, p, h1, h2, h3, h4, h5, h6, .exercise-description, .demo-images {
   max-width: 800px;
   margin: 20px auto; }
 
