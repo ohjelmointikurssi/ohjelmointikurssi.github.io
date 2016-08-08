@@ -35,17 +35,17 @@
 
 <div class="chapter">
   <p>
-    Usein haluamme käyttää tietoa useammassa paikassa. Jotta tämä olisi mahdollista haluamme jonkin tavan säilöä tietoa, jotta siihen pääsee myöhemmin käsiksi. Ohjelmoinnissa voimme ottaa tietoa talteen <i>muuttujiin</i>.
+    Muuttujia käytetään tiedon tallentamiseen. Niitä tarvitaan silloin, kun tietoa halutaan käsitellä useammassa kohdassa ohjelmaa. Ohjelma voi esimerkiksi aluksi arpoa käyttäjälle nimen, jota käytetään osana ohjelmaan liittyvää tarinaa.
   </p>
 
   <h2>Merkkijonomuuttujat</h2>
 
   <p>
-    Edellisessä osiossa tulostettiin kaikenlaisia lauseita ja kuviota. Tulostuskomennolle piti antaa tulostettava asia lainausmerkeissä, jotta tietokone ymmärtäisi asian olevan merkkijono. Näitä samoja merkkijonoja voidaan tallettaa muuttujiin.
+    Edellisessä osiossa tulostettiin kaikenlaisia lauseita ja kuviota. Tulostuskomennolle piti antaa tulostettava asia lainausmerkeissä, jotta tietokone ymmärtäisi asian olevan merkkijono. Merkkijonoja voidaan tallettaa muuttujiin.
   </p>
 
   <p>
-    Muuttujilla pitää aina olla nimi, jonka avulla niitä voidaan käyttää myöhemmin. Nimeksi voi valita melkein minkä tahansa sanan. Nimen lisäksi muuttuja tarvitsee sisällön. Sisältö tarkoittaa sitä tietoa, jonka haluamme tallettaa muuttujaan.
+    Jokaisella muuttujalla tulee olla nimi, ja muuttujaa luodessa nimeen liitetään sisältö eli muuttujan arvo. Nimeksi voi valita melkein minkä tahansa sanan.
   </p>
 
   <p>
@@ -74,14 +74,19 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
   <h2>Tuntemattomat muuttujat</h2>
 
   <p>
-    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole koskaan luotu, tietokone ei tiedä mitä sillä pitäisi tehdä ja keskeytää ohjelman suorituksen. Esimerkiksi, jos yritetään tulostaa jotakin muuttujaa, jota ei ole luotu:
+    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole koskaan luotu eikä sillä siis ole nimeä, ei ohjelma tiedä mitä muuttujalla pitäisi tehdä. Tällöin tietokone keskeyttää ohjelman suorituksen. Jos yritetään tulostaa mitä tahansa muuttujaa, jota ei ole luotu:
   </p>
 
     <pre><code class="javascript">console.log(muuttujaJotaEiOleLuotu)</code></pre>
 
   <p>
-    Tietokone antaakin meille arvoituksellisen virheen: <code>ReferenceError: muuttujaJotaEiOleLuotu is not defined</code>. Tämä tietokonen tapa sanoa, että ohjelmassa yritettiin käyttää muuttujaa nimeltä: <code>muuttujaJotaEiOleLuotu</code>, ja tietokone ei tunne tämän nimistä muuttujaa. Virheen voi korjata luomalla oikean nimisen muuttujan ennen sen käyttämistä.
+    Tietokone antaa meille virheen: <code>ReferenceError: muuttujaJotaEiOleLuotu is not defined</code>. Tämä on tietokonen tapa sanoa, että ohjelmassa yritettiin käyttää muuttujaa nimeltä: <code>muuttujaJotaEiOleLuotu</code>, ja tietokone ei tunne tämän nimistä muuttujaa. Virheen voi korjata luomalla oikean nimisen muuttujan ennen sen käyttämistä.
   </p>
+
+
+      <pre><code class="javascript">var muuttujaJotaEiOleLuotu = "onpas!"
+console.log(muuttujaJotaEiOleLuotu)</code></pre>
+
 
 <div class="exercise-description">
   <div class="exercise-description-header">
@@ -106,7 +111,7 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
     Tehtävä:<div><strong>Muuttujan luonti</strong></div>
   </div>
   <div class="exercise-description-content ">
-      <div>    Tehtäväpohjassa on valmiina komento, joka tulostaa muuttujan <code>etunimi</code> sisällön. Ohjelma kuitenkaan ei toimi, koska etunimi-nimistä muuttujaa ei ole luotu. Luo muuttuja <code>etunimi</code> ja laita sen sisällöksi merkkijono, joka on etunimesi.
+      <div>    Tehtäväpohjassa on valmiina komento, joka tulostaa muuttujan <code>etunimi</code> sisällön. Ohjelma ei toimi, sillä etunimi-nimistä muuttujaa ei ole luotu. Luo muuttuja <code>etunimi</code> ja aseta sen sisällöksi merkkijono, joka on etunimesi.
 </div>
   </div>
     <div class="exercise-description-additional-information">
@@ -127,12 +132,6 @@ var kuuluu = ", mitä kuuluu"
 var mitaKuuluu = hei + kuuluu
 console.log(mitaKuuluu)</code></pre>
 
-  <pre><code class="javascript">var hei = "Hei"
-var kuuluu = ", mitä kuuluu"
-console.log(hei + kuuluu)</code></pre>
-
-  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?")</code></pre>
-
 <div class="exercise-description">
   <div class="exercise-description-header">
     Tehtävä:<div><strong>Lauseen muodostaminen</strong></div>
@@ -148,8 +147,17 @@ console.log(hei + kuuluu)</code></pre>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5007'></div>
 
+  <p>Saman tulostuksen voi saada aikaan erilaisilla tavoilla.</p>
+
+  <pre><code class="javascript">var hei = "Hei"
+var kuuluu = ", mitä kuuluu"
+console.log(hei + kuuluu)</code></pre>
+
+  <pre><code class="javascript">console.log("Hei" + ", mitä kuuluu?")</code></pre>
+
+
   <p>
-    Voimme yhdistellä niin monta asiaa kun haluamme yhdellä rivillä. Voimme esimerkiksi yhidistellä 3, 4 tai viisi eri merkkijonoa toisiinsa ketjuttamalla ne peräkkäin. Esimerkiksi alla oleva esimerkki tulostaa: "Tämän päivän sää on ehkä poutainen".
+    Voimme yhdistellä niin monta asiaa kuin haluamme yhdellä rivillä. Voimme esimerkiksi yhidistellä 3, 4 tai 5 eri merkkijonoa toisiinsa ketjuttamalla ne peräkkäin. Esimerkiksi alla oleva esimerkki tulostaa: "Tämän päivän sää on ehkä poutainen".
   </p>
 
   <pre><code class="javascript">var paivan = "Tämän päivän "
@@ -173,10 +181,19 @@ console.log(yhdistetty)</code></pre>
 
   <div class="code-area" data-type='tmc-exercise' data-id='5009'></div>
 
+  <p>Tyypillinen virhe merkkijonojen yhdistämisessä on se, että unohtaa <code>+</code>-operaattorin jostain kohdasta ohjelmakoodia. Esimerkiksi alla oleva koodi ei toimi.</p>
+
+  <pre><code class="javascript">var paivan = "Tämän päivän "
+var saa = "sää on "
+var poutainen = " poutainen "
+var yhdistetty = paivan + saa + "ehkä" poutainen
+console.log(yhdistetty)</code></pre>
+
+
   <h2>Numeromuuttujat</h2>
 
   <p>
-    Merkkijonot eivät ole ainoa asia, joita muuttujiin voidaan tallettaa. Eräs hyödyllisimmistä asioista, joita voidaan laittaa muuttujiin ovat numerot. Numeroiden etu merkkijonoihin on, että niillä voidaan helposti tehdä laskutoimituksia ja niiden suuruutta on helppo vertailla keskenään.
+    Muuttujiin voidaan tallentaa muutakin kuin merkkijonoja. Eräs hyödyllisimmistä asioista, joita voidaan laittaa muuttujiin ovat numerot. Numeroiden etu merkkijonoihin on se, että niillä voidaan helposti tehdä laskutoimituksia ja niiden suuruutta on helppo vertailla keskenään.
   </p>
 
   <p>
@@ -187,7 +204,7 @@ console.log(yhdistetty)</code></pre>
 
 <p class="hint">
   <i class="fa fa-info-circle" aria-hidden="true"></i>
-      Näissä tehtävissä olemme piiloittaneet suurimman osan koodista ja jättäneet näkyville vain osat, joita sinun täytyy muokata.
+      Seuraavissa tehtävissä iso osa ohjelman koodista on piilossa. Näkyvissä on vain ne osat, joita sinun täytyy muokata.
 
 </p>
 
