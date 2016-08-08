@@ -59,6 +59,12 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
     Yllä olevassa koodinpätkässä loimme muuttujan nimeltä <code>nokkelastiNimettyMuuttuja</code> ja tulostimme sen. Emme laittaneet tulostuskomennon sisään lainausmerkkejä, koska halusimme kertoa tietokoneelle, että tulostettava asia on muuttuja. Esimerkki tulostaa: <code>Olen nokkelasti nimetty muuttuja!</code>
   </p>
 
+<p class="hint">
+  <i class="fa fa-info-circle" aria-hidden="true"></i>
+      Osa tehtävien koodista on lukittu. Voit muokata vain vapaita alueita. Lukituissa alueissa on harmaa tausta ja lukitsemattomassa on valkoinen tausta.
+
+</p>
+
 <div class="exercise-description">
   <div class="exercise-description-header">
     Tehtävä:<div><strong>Muuttujan arvon vaihtaminen</strong></div>
@@ -74,17 +80,16 @@ console.log(nokkelastiNimettyMuuttuja)</code></pre>
   <h2>Tuntemattomat muuttujat</h2>
 
   <p>
-    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole koskaan luotu eikä sillä siis ole nimeä, ei ohjelma tiedä mitä muuttujalla pitäisi tehdä. Tällöin tietokone keskeyttää ohjelman suorituksen. Jos yritetään tulostaa mitä tahansa muuttujaa, jota ei ole luotu:
+    Jos ohjelmassa yritetään käyttää muuttujaa, jota ei ole ennen käyttöyritystä luotu, ohjelma ei tiedä mitä muuttujalla pitäisi tehdä. Tämä johtuu siitä, että tietokone ei voi käyttää muuttujia, joita ei ole vielä nimetty. Tällöin tietokone keskeyttää ohjelman suorituksen. Jos yritetään tulostaa mitä tahansa muuttujaa, jota ei ole luotu:
   </p>
 
-    <pre><code class="javascript">console.log(muuttujaJotaEiOleLuotu)</code></pre>
-
+  <pre><code class="javascript">console.log(muuttujaJotaEiOleLuotu)</code></pre>
   <p>
     Tietokone antaa meille virheen: <code>ReferenceError: muuttujaJotaEiOleLuotu is not defined</code>. Tämä on tietokonen tapa sanoa, että ohjelmassa yritettiin käyttää muuttujaa nimeltä: <code>muuttujaJotaEiOleLuotu</code>, ja tietokone ei tunne tämän nimistä muuttujaa. Virheen voi korjata luomalla oikean nimisen muuttujan ennen sen käyttämistä.
   </p>
 
 
-      <pre><code class="javascript">var muuttujaJotaEiOleLuotu = "onpas!"
+  <pre><code class="javascript">var muuttujaJotaEiOleLuotu = "onpas!"
 console.log(muuttujaJotaEiOleLuotu)</code></pre>
 
 
@@ -99,12 +104,6 @@ console.log(muuttujaJotaEiOleLuotu)</code></pre>
 </div>
 
   <div data-type='tmc-exercise' data-id='5036'></div>
-
-<p class="hint">
-  <i class="fa fa-info-circle" aria-hidden="true"></i>
-      Osa tehtävien koodista on lukittu. Voit muokata vain vapaita alueita. Lukituissa alueissa on harmaa tausta ja lukitsemattomassa on valkoinen tausta.
-
-</p>
 
 <div class="exercise-description">
   <div class="exercise-description-header">
@@ -229,7 +228,7 @@ console.log(yhdistetty)</code></pre>
     Tehtävä:<div><strong>Muuttujien korjaaminen</strong></div>
   </div>
   <div class="exercise-description-content ">
-      <div>    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä on kuitenkin muutama muuttujiin liittyvä virhe. Löydä muuttujien virheet ja korjaa ne.
+      <div>    Tässä tehtävässä pääset muokkaamaan ensimmäisestä tehtävästä tuttua peliä. Pelissä kuitenkin muuttujien arvot ovat hassusti. Korjaa peli niin, että rubiineja voi kerätä. Korjaa myös liikkuminen toimimaan järkevästi.
 </div>
   </div>
     <div class="exercise-description-additional-information">
