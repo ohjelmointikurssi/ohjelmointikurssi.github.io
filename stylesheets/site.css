@@ -170,7 +170,7 @@ pre {
   padding: 5px;
   border-radius: 10px; }
 
-.narrow, .sponsor-logos, .next-chapter, p, h1, h2, h3, h4, h5, h6, .exercise-description, .demo-images {
+.narrow, .sponsor-logos, .next-chapter, p, h1, h2, h3, h4, h5, h6, .exercise-description, .demo-images, .browser-warning {
   max-width: 800px;
   margin: 20px auto; }
 
@@ -241,3 +241,26 @@ img {
     margin-right: 30px; }
   .demo-images div {
     padding-top: 10px; }
+
+.browser-warning {
+  background-color: #c0392b;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  font-size: 18px; }
+  .browser-warning .warning-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px; }
+  .browser-warning i {
+    font-size: 35px;
+    margin-right: 10px;
+    vertical-align: middle; }
+
+#warning-container {
+  display: none; }
+  #warning-container.visible {
+    display: block;
+    background-color: #72bae9;
+    max-width: 100%;
+    padding: 10px; }

@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/color-brewer.min.css">
     <link href="/stylesheets/site.css" rel="stylesheet" />
-    <script src="/javascripts/all.js"></script>
   </head>
 
   <body class="piirtaminen piirtaminen_index">
@@ -30,6 +29,14 @@
       <a href="/matopeli/">Matopeli</a>
     </nav>
     <div id='content-container' class='exercise-page' style='counter-reset: h1counter 6'>
+      <div id="warning-container">
+        <div class="browser-warning">
+          <div class="warning-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Ohjelmointikurssi ei toimi kunnolla selaimessasi.</div>
+          <div>
+            Ohjelmointikurssi ei valitettavasti toimi Internet Explorer -selailemella. Suosittelemme että teet kurssia joko uusimmalla Chromella tai uusimalla Firefoxilla.
+          </div>
+        </div>
+      </div>
       <h1>Piirtäminen</h1>
 
 <div class="chapter">
@@ -134,6 +141,7 @@
     </footer>
 
       <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.0.0/bowser.min.js"></script>
       <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
       <script src='//cdnjs.cloudflare.com/ajax/libs/jszip/2.2.2/jszip.js'></script>
       <script src='//stuk.github.io/jszip-utils/dist/jszip-utils.js'></script>
@@ -151,5 +159,6 @@
           TMCWebClient.initialize();
         });
       </script>
+    <script src="/javascripts/all.js"></script>
   </body>
 </html>
