@@ -28,15 +28,15 @@
 
   <body class="toisto toisto_index">
     <nav>
-  <a href="/">Etusivu</a>
-  <a href="/tulostaminen/">Tulostaminen</a>
-  <a href="/muuttujat/">Muuttujat</a>
-  <a href="/listat/">Listat</a>
-  <a href="/funktiot/">Funktiot</a>
-  <a href="/ehdot/">Ehdot</a>
-  <a href="/piirtaminen/">Piirtäminen</a>
-  <a class="active" href="/toisto/">Toisto</a>
-  <a href="/matopeli/">Matopeli</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'index.html')" href="/">Etusivu</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'tulostaminen.html')" href="/tulostaminen/">Tulostaminen</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'muuttujat.html')" href="/muuttujat/">Muuttujat</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'listat.html')" href="/listat/">Listat</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'funktiot.html')" href="/funktiot/">Funktiot</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'ehdot.html')" href="/ehdot/">Ehdot</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'piirtaminen.html')" href="/piirtaminen/">Piirtäminen</a>
+  <a class="active" onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'toisto.html')" href="/toisto/">Toisto</a>
+  <a onclick="ga('send', 'event', 'navigation_topic_link', 'click', 'matopeli.html')" href="/matopeli/">Matopeli</a>
 </nav>
 
     <div id='content-container' class='exercise-page' style='counter-reset: h1counter 7'>
@@ -120,7 +120,7 @@ sanaa</code></pre>
   <div>
     <div>Valmis?</div>
     <div>Jatka seuraavaksi</div>
-    <div><a href="/matopeli/">matopeliin</a>.</div>
+    <div><a onclick="ga('send', 'event', 'next_topic_link', 'click', 'matopeli.html')" href="/matopeli/">matopeliin</a>.</div>
   </div>
 </div>
 
