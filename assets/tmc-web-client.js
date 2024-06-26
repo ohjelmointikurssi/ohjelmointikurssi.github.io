@@ -16942,7 +16942,7 @@
 	        return undefined
 	    };
 	
-	  return "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>sandbox</title>\n  <style type=\"text/css\">\n    body {\n      margin: 0;\n    }\n    .game-area {\n      width: 800px;\n      height: 600px;\n    }\n  </style>\n  <script src=\"https://cdn.polyfill.io/v2/polyfill.min.js\"></script>\n"
+	  return "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>sandbox</title>\n  <style type=\"text/css\">\n    body {\n      margin: 0;\n    }\n    .game-area {\n      width: 800px;\n      height: 600px;\n    }\n  </style>\n  \n"
 	    + ((stack1 = lookupProperty(helpers,"if").call(alias1,(depth0 != null ? lookupProperty(depth0,"isGame") : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":16,"column":2},"end":{"line":18,"column":9}}})) != null ? stack1 : "")
 	    + "\n  <script>\n"
 	    + ((stack1 = lookupProperty(helpers,"if").call(alias1,(depth0 != null ? lookupProperty(depth0,"isGame") : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.program(5, data, 0),"data":data,"loc":{"start":{"line":21,"column":4},"end":{"line":25,"column":11}}})) != null ? stack1 : "")
